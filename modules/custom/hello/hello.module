@@ -1,0 +1,28 @@
+<?php
+/**
+ * Implements hook_help().
+ */
+function hello_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        case 'help.page.hello':
+            return t('A DRUPAL module for the DRUPAL8');
+            break;
+    }
+}
+/**
+ * Implements hook_cron().
+ */
+function hello_cron()
+{
+    drupal_set_message(t('error'));
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function hello_user_login($account)
+{
+	$user  = $account->getAccountName();
+	drupal_set_message (t('Bienvenu yawehed el tokba ya @bimbo', array('@bimbo' => $user)));
+}
