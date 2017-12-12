@@ -6,3 +6,20 @@ hello.hello:
     moha: 'pas de parametre'
   requirements:
     _access: 'TRUE'
+
+hello.hello-rss:
+  path: '/hello-rss'
+  defaults:
+    _titre: 'Hello-rss'
+    _controller: '\Drupal\hello\Controller\HelloRssController::content'
+  requirements:
+    _access: 'TRUE'
+
+hello.hello-liste-noeuds:
+  path: 'hello/liste-noeuds/{type}'
+  defaults:
+    _titre: 'type'
+    _controller: '\Drupal\hello\Controller\HelloListeNoeudsController::content'
+    type: 'pas de param'
+  requirements:
+    _access: 'TRUE'
