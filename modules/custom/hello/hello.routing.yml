@@ -16,10 +16,20 @@ hello.hello-rss:
     _access: 'TRUE'
 
 hello.hello-liste-noeuds:
-  path: 'hello/liste-noeuds/{type}'
+  path: '/hello/liste-noeuds/{type}'
   defaults:
     _titre: 'type'
     _controller: '\Drupal\hello\Controller\HelloListeNoeudsController::content'
     type: 'pas de param'
   requirements:
     _access: 'TRUE'
+
+hello.hello-update-history:
+  path: '/hello/update-history/{node}'
+  defaults:
+    _titre: 'hello update history'
+    _controller: '\Drupal\hello\Controller\HelloUpdateHistoryController::content'
+    node: ''
+  requirements:
+    _access: 'TRUE'
+

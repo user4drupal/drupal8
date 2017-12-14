@@ -8,5 +8,10 @@ hello.hello-liste-noeuds:
   base_route: hello.hello
   title: 'liste de noeuds makrotta'
 
+hello.hello-update-history:
+  route_name: hello.hello-update-history
+  base_route: entity.node.canonical
+  title: 'History'
+
 
   

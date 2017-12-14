@@ -26,3 +26,23 @@ function hello_user_login($account)
 	$user  = $account->getAccountName();
 	drupal_set_message (t('Bienvenu yawehed el tokba ya @bimbo', array('@bimbo' => $user)));
 }
+
+/**
+ * Implements hook_node_update() .
+ */
+function hello_node_update(Drupal\Core\Entity\EntityInterface $entity){
+  $date = time();
+  $database = \Drupal::database();
+  $user = \Drupal::currentUser();
+  $user_id = $user->id();
+  $entity_id = $entity->id();
+  
+  $database->insert('hello_node_history')
+    ->fields(array(
+      'nid' => $entity_id,
+      'uid' => $user_id,
+      'update_time' => $date
+    )
+    )
+    ->execute();
+}
