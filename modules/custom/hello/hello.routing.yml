@@ -33,3 +33,10 @@ hello.hello-update-history:
   requirements:
     _access: 'TRUE'
 
+hello.hello-calculator-form:
+  path: '/hello/hello-calculator-form'
+  defaults: 
+    _title: 'Calculatrice'
+    _form: '\Drupal\hello\Form\HelloCalculatorForm'
+  requirements:
+    _permission: 'access content'

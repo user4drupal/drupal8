@@ -13,5 +13,9 @@ hello.hello-update-history:
   base_route: entity.node.canonical
   title: 'History'
 
+hello.hello-calculator-form:
+  route_name: hello.hello-calculator-form
+  base_route: hello.hello
+  title: 'Calculator'
 
   

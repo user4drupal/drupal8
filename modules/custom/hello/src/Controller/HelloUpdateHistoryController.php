@@ -23,16 +23,19 @@ class HelloUpdateHistoryController extends ControllerBase{
   //kint($table);
   
     $header = ['update time', 'auteur'];
-    //$count= count($rows);
+/**
+
+    $count= count($rows);
     //récupérer le nom de la node
-    //$nodeEntity = Node::load($node);
-    //$name = $nodeEntity->label();
+    $nodeEntity = Node::load($node);
+    $name = $nodeEntity->label();
    
-    //$render['message'] =array(
-      //'#theme' => 'hello',
-      //'#count' => $count,
-      //'#node' => $name,
-    //);
+    $render['message'] =array(
+      '#theme' => 'hello',
+      '#count' => $count,
+      '#node' => $name,
+    );
+*/
     $render['tableau'] = array(
       '#theme' => 'table',
       '#rows' => $table,
