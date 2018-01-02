@@ -46,3 +46,34 @@ function hello_node_update(Drupal\Core\Entity\EntityInterface $entity){
     )
     ->execute();
 }
+
+//fonction de preprocess pour créer une class dans tous les blocks
+
+function hello_preprocess_block(&$variables) {
+  $class = \Drupal::config('hello.config')->get('color');
+  $variables['attributes']['class'][] = $class;
+  //kint($variables);
+  
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function hello_page_attachments(array &$attachement){
+  
+  $attachement['#attached']['library'][] = 'hello/base';
+  
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hello_theme($existing, $type, $theme, $path)
+{
+  return array(
+    'hello' => array(
+      'template' => 'hello-node-history',
+      'variables' => array('count' => NULL, 'node' => NULL)
+    ),
+  );
+}

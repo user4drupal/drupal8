@@ -40,3 +40,11 @@ hello.hello-calculator-form:
     _form: '\Drupal\hello\Form\HelloCalculatorForm'
   requirements:
     _permission: 'access content'
+
+hello.hello-admin-form:
+  path: '/hello/hello-admin-form'
+  defaults: 
+    _title: 'Formulaire admin'
+    _form: '\Drupal\hello\Form\HelloAdminForm'
+  requirements:
+    _permission: 'access content'

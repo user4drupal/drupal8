@@ -2,6 +2,7 @@
 namespace Drupal\hello\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
+
 class HelloUpdateHistoryController extends ControllerBase{
   function content($node) {
     $bdd = \Drupal::database();
@@ -23,19 +24,20 @@ class HelloUpdateHistoryController extends ControllerBase{
   //kint($table);
   
     $header = ['update time', 'auteur'];
-/**
+
 
     $count= count($rows);
     //récupérer le nom de la node
     $nodeEntity = Node::load($node);
+   //kint($nodeEntity);
     $name = $nodeEntity->label();
-   
+//hook_themme   
     $render['message'] =array(
       '#theme' => 'hello',
       '#count' => $count,
       '#node' => $name,
     );
-*/
+//render array normal
     $render['tableau'] = array(
       '#theme' => 'table',
       '#rows' => $table,
