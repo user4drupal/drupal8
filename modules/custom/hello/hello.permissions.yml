@@ -2,3 +2,8 @@ access hello:
   title: 'Access hello'
   description: 'Description de ma permission access hello'
   restrict access: 'true'
+
+administer hello:
+  title: 'Administer hello'
+  description: 'Description de ma permission administer hello'
+  restrict access: 'true'

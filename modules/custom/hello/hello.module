@@ -77,3 +77,15 @@ function hello_theme($existing, $type, $theme, $path)
     ),
   );
 }
+
+function hello_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+//kint($form);
+  $form['telephone'] = array(
+    '#type' => 'tel',
+    '#title' => t('Téléphone'),
+    '#weight' => -2,
+  );
+  
+  $form['actions']['submit']['#value'] = t('Envoie message ya rkhis');
+  $form['subject']['#access'] = FALSE;
+}

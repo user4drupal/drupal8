@@ -2,6 +2,8 @@
 namespace Drupal\hello\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
 
 /**
  * Provides a session block.
@@ -12,6 +14,14 @@ use Drupal\Core\Block\BlockBase;
  *)
  */
 class SessionBlock extends BlockBase{
+
+    protected function blockAccess(AccountInterface $account){
+    if ($account->hasPermission('access hello')) {
+      return AccessResult::allowed();
+    }
+    return AccessResult::forbidden();
+  }
+  
 
 	  public function build(){
     $database = \Drupal::database();

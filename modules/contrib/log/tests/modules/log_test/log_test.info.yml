@@ -1,0 +1,13 @@
+name: 'Log module tests'
+type: module
+description: 'Support module for log testing.'
+package: Testing
+# core: 8.x
+dependencies:
+  - log
+
+# Information added by Drupal.org packaging script on 2016-09-08
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'log'
+datestamp: 1473354879

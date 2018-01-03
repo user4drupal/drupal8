@@ -39,7 +39,7 @@ hello.hello-calculator-form:
     _title: 'Calculatrice'
     _form: '\Drupal\hello\Form\HelloCalculatorForm'
   requirements:
-    _permission: 'access content'
+    _permission: 'access hello'
 
 hello.hello-admin-form:
   path: '/hello/hello-admin-form'
@@ -47,4 +47,4 @@ hello.hello-admin-form:
     _title: 'Formulaire admin'
     _form: '\Drupal\hello\Form\HelloAdminForm'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer hello'
