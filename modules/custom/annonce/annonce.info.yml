@@ -1,5 +1,5 @@
 name: annonce
 type: module
-description: un module d'annonce à la con
+description: My Awesome Module
 core: 8.x
 package: Custom

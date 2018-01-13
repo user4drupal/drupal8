@@ -16,7 +16,7 @@ function annonce_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.annonce':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('un module d&#039;annonce à la con') . '</p>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
       return $output;
 
     default:
